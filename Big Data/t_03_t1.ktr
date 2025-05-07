@@ -446,16 +446,6 @@
       <to>Ordenar filas 2</to>
       <enabled>Y</enabled>
     </hop>
-    <hop>
-      <from>Ordenar filas 2</from>
-      <to>Unión por clave</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Ordenar filas</from>
-      <to>Unión por clave</to>
-      <enabled>Y</enabled>
-    </hop>
   </order>
   <step>
     <name>Ordenar filas</name>
@@ -538,49 +528,6 @@
     <GUI>
       <xloc>376</xloc>
       <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Unión por clave</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>INNER</join_type>
-    <step1>Ordenar filas</step1>
-    <step2>Ordenar filas 2</step2>
-    <keys_1>
-      <key>ProductID</key>
-      <key>Product</key>
-      <key>Category</key>
-      <key>Segment</key>
-      <key>ManufacturerID</key>
-    </keys_1>
-    <keys_2>
-      <key>ProductID</key>
-      <key>Date</key>
-      <key>Zip</key>
-      <key>Units</key>
-      <key>Revenue</key>
-      <key>Country</key>
-    </keys_2>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>480</xloc>
-      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
